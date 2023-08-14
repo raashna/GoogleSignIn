@@ -2,6 +2,7 @@ package com.example.googlesignin
 
 import android.os.Bundle
 import android.provider.ContactsContract.CommonDataKinds.Identity
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -41,9 +42,11 @@ class MainActivity : ComponentActivity() {
             oneTapClient = com.google.android.gms.auth.api.identity.Identity.getSignInClient(applicationContext)
         )
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+
             GoogleSignInTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
